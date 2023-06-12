@@ -53,7 +53,7 @@ export function useQueue<T>(initialValue: T[] = []): QueueMethods<T> {
         return listRef.current[0];
       },
       get last() {
-        return listRef.current[listRef.current.length - 1];
+        return listRef.current.at(-1);
       },
       get size() {
         return listRef.current.length;

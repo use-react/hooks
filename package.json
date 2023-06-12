@@ -32,20 +32,20 @@
     ]
   },
   "scripts": {
-    "prepare": "husky install",
-    "commit": "git-cz",
+    "prepare": "yarn husky install",
+    "commit": "yarn git-cz",
     "build": "yarn build:cleanup && concurrently yarn:build:cjs yarn:build:esm",
-    "build:cleanup": "rimraf ./dist",
-    "build:cjs": "tsc -p ./tsconfig.build.json --module CommonJS --outDir ./cjs",
-    "build:esm": "tsc -p ./tsconfig.build.json --module ESNext --outDir ./esm",
+    "build:cleanup": "yarn rimraf ./dist",
+    "build:cjs": "yarn tsc -p ./tsconfig.build.json --module CommonJS --outDir ./cjs",
+    "build:esm": "yarn tsc -p ./tsconfig.build.json --module ESNext --outDir ./esm",
     "new-hook": "node utility/add-new-hook.cjs",
-    "test": "jest --selectProjects dom ssr",
+    "test": "yarn jest --selectProjects dom ssr",
     "test:coverage": "yarn test --coverage",
-    "lint": "eslint ./ ./.storybook",
+    "lint": "yarn eslint --ext .js,.ts,.jsx,.tsx,.md,.mdx ./ ./.storybook",
     "lint:fix": "yarn lint --fix",
-    "storybook:watch": "start-storybook -p 6006 --docs --no-manager-cache",
-    "storybook:build": "build-storybook --docs -o ./storybook-build",
-    "storybook:deploy": "storybook-to-ghpages -s storybook:build"
+    "storybook:watch": "yarn start-storybook -p 6006 --docs --no-manager-cache",
+    "storybook:build": "yarn build-storybook --docs -o ./storybook-build",
+    "storybook:deploy": "yarn storybook-to-ghpages -s storybook:build"
   },
   "config": {
     "commitizen": {
@@ -84,7 +84,7 @@
     "@commitlint/config-conventional": "^17.6.5",
     "@commitlint/cz-commitlint": "^17.5.0",
     "@jamesacarr/jest-reporter-github-actions": "^0.0.4",
-    "@react-hookz/eslint-config": "^1.7.7",
+    "@react-hookz/eslint-config": "^1.8.0",
     "@react-hookz/eslint-formatter-gha": "^1.0.1",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",

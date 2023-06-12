@@ -5,7 +5,8 @@ module.exports = {
     'node_modules',
     'coverage',
     'storybook-build',
-    'dist',
+    'cjs',
+    'esm',
     '.github/workflows',
     '.husky',
     'CHANGELOG.md',
@@ -14,7 +15,7 @@ module.exports = {
   parserOptions: {
     project: './tsconfig.eslint.json',
     tsconfigRootDir: __dirname,
-    extraFileExtensions: ['.md'],
+    extraFileExtensions: ['.md', '.mdx'],
   },
 
   overrides: [
@@ -114,7 +115,7 @@ module.exports = {
       },
     },
     {
-      files: ['*.md'],
+      files: ['*.md', '*.mdx'],
       extends: ['@react-hookz/eslint-config/mdx'],
     },
   ],
