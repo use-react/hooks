@@ -1,11 +1,11 @@
 import { renderHook } from '@testing-library/react-hooks/dom';
-import { DependencyList, EffectCallback } from 'react';
+import type { DependencyList, EffectCallback } from 'react';
 import {
   truthyAndArrayPredicate,
   truthyOrArrayPredicate,
   useConditionalEffect,
   useUpdateEffect,
-} from '../..';
+} from '#root/index.js';
 
 describe('useConditionalEffect', () => {
   it('should be defined', () => {

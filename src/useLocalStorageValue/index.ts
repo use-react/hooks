@@ -1,5 +1,6 @@
-import { useStorageValue, UseStorageValueOptions, UseStorageValueResult } from '../useStorageValue';
-import { isBrowser, noop } from '../util/const';
+import type { UseStorageValueOptions, UseStorageValueResult } from '#root/useStorageValue/index.js';
+import { useStorageValue } from '#root/useStorageValue/index.js';
+import { isBrowser, noop } from '#root/util/const.js';
 
 let IS_LOCAL_STORAGE_AVAILABLE: boolean;
 

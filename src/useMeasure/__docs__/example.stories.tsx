@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useMeasure } from '../..';
+import { useMeasure } from '#root/index.js';
 
 export const Example: React.FC = () => {
   const [measurements, ref] = useMeasure<HTMLDivElement>();

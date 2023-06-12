@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useControlledRerenderState, useToggle } from '../..';
+import { useControlledRerenderState, useToggle } from '#root/index.js';
 
 export const Example: React.FC = () => {
   const [state, setState] = useControlledRerenderState(0);

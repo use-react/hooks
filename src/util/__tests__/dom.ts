@@ -1,5 +1,5 @@
-import { resolveHookState } from '../..';
-import { basicDepsComparator, off, on } from '../misc';
+import { resolveHookState } from '#root/index.js';
+import { basicDepsComparator, off, on } from '#root/util/misc.js';
 
 describe('resolveHookState', () => {
   it('should be defined', () => {

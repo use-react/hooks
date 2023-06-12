@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { DependencyList } from 'react';
-import type { DependenciesComparator } from '../types';
+import type { DependencyList } from 'react';
+import type { DependenciesComparator } from '#root/types.js';
 
 export function on<T extends EventTarget>(
   obj: T | null,

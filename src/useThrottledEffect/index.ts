@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { DependencyList, useEffect } from 'react';
-import { useThrottledCallback } from '../useThrottledCallback';
+import type { DependencyList } from 'react';
+import { useEffect } from 'react';
+import { useThrottledCallback } from '#root/useThrottledCallback/index.js';
 
 /**
  * Like `useEffect`, but passed function is throttled.

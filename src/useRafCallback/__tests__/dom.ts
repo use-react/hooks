@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react-hooks/dom';
-import { useRafCallback } from '../..';
+import { useRafCallback } from '#root/index.js';
 
 describe('useRafCallback', () => {
   const raf = global.requestAnimationFrame;

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useAsync, useMountEffect } from '../..';
+import { useAsync, useMountEffect } from '#root/index.js';
 
 export const Example: React.FC = () => {
   const [state, actions] = useAsync(

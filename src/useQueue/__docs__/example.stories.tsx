@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useQueue } from '../..';
+import { useQueue } from '#root/index.js';
 
 export const Example: React.FC = () => {
   const { add, remove, first, last, size, items } = useQueue<number>([1, 2, 3]);

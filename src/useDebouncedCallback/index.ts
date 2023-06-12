@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { DependencyList, useMemo, useRef } from 'react';
-import { useUnmountEffect } from '../useUnmountEffect';
+import type { DependencyList } from 'react';
+import { useMemo, useRef } from 'react';
+import { useUnmountEffect } from '#root/useUnmountEffect/index.js';
 
 export interface DebouncedFunction<Fn extends (...args: any[]) => any> {
   (this: ThisParameterType<Fn>, ...args: Parameters<Fn>): void;

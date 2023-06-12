@@ -1,5 +1,6 @@
-import { Dispatch, SetStateAction, useState } from 'react';
-import { useDebouncedCallback } from '../useDebouncedCallback';
+import type { Dispatch, SetStateAction } from 'react';
+import { useState } from 'react';
+import { useDebouncedCallback } from '#root/useDebouncedCallback/index.js';
 
 /**
  * Like `useState` but its state setter is debounced.

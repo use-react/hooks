@@ -1,6 +1,7 @@
-import { Dispatch, SetStateAction, useState } from 'react';
-import { useRafCallback } from '../useRafCallback';
-import { useUnmountEffect } from '../useUnmountEffect';
+import type { Dispatch, SetStateAction } from 'react';
+import { useState } from 'react';
+import { useRafCallback } from '#root/useRafCallback/index.js';
+import { useUnmountEffect } from '#root/useUnmountEffect/index.js';
 
 export function useRafState<S>(initialState: S | (() => S)): [S, Dispatch<SetStateAction<S>>];
 export function useRafState<S = undefined>(): [

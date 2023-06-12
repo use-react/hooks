@@ -1,10 +1,11 @@
 /* eslint-disable @typescript-eslint/no-use-before-define,no-use-before-define */
 import Cookies from 'js-cookie';
-import { Dispatch, useCallback, useEffect, useState } from 'react';
-import { useFirstMountState } from '../useFirstMountState';
-import { useMountEffect } from '../useMountEffect';
-import { useSyncedRef } from '../useSyncedRef';
-import { isBrowser } from '../util/const';
+import type { Dispatch } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+import { useFirstMountState } from '#root/useFirstMountState/index.js';
+import { useMountEffect } from '#root/useMountEffect/index.js';
+import { useSyncedRef } from '#root/useSyncedRef/index.js';
+import { isBrowser } from '#root/util/const.js';
 
 const cookiesSetters = new Map<string, Set<Dispatch<string | null>>>();
 

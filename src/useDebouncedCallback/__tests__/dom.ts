@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react-hooks/dom';
-import { useDebouncedCallback } from '../..';
+import { useDebouncedCallback } from '#root/index.js';
 
 describe('useDebouncedCallback', () => {
   beforeAll(() => {

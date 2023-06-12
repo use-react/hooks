@@ -1,7 +1,9 @@
-import { SetStateAction, useMemo } from 'react';
-import { useMediatedState } from '../useMediatedState';
-import { useSyncedRef } from '../useSyncedRef';
-import { InitialState, resolveHookState } from '../util/resolveHookState';
+import type { SetStateAction } from 'react';
+import { useMemo } from 'react';
+import { useMediatedState } from '#root/useMediatedState/index.js';
+import { useSyncedRef } from '#root/useSyncedRef/index.js';
+import type { InitialState } from '#root/util/resolveHookState.js';
+import { resolveHookState } from '#root/util/resolveHookState.js';
 
 export interface CounterActions {
   /**

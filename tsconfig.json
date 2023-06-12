@@ -5,19 +5,21 @@
     "alwaysStrict": true,
     "module": "ESNext",
     "target": "ESNext",
-    "moduleResolution": "Node16",
+    "moduleResolution": "NodeNext",
     "lib": [
       "ESNext",
       "DOM"
     ],
-    "jsx": "react",
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "paths": {
+      "#root/*": [
+        "./src/*"
+      ]
+    }
   },
   "exclude": [
     "node_modules"
-  ],
-  "ts-node": {
-    "swc": true
-  }
+  ]
 }

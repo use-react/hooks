@@ -1,6 +1,8 @@
-import { Dispatch, useCallback, useState } from 'react';
-import { useSyncedRef } from '../useSyncedRef';
-import { InitialState, NextState, resolveHookState } from '../util/resolveHookState';
+import type { Dispatch } from 'react';
+import { useCallback, useState } from 'react';
+import { useSyncedRef } from '#root/useSyncedRef/index.js';
+import type { InitialState, NextState } from '#root/util/resolveHookState.js';
+import { resolveHookState } from '#root/util/resolveHookState.js';
 
 export function useMediatedState<State = undefined>(): [
   State | undefined,

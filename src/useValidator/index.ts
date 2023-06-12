@@ -1,6 +1,7 @@
-import { DependencyList, Dispatch, useCallback, useEffect, useState } from 'react';
-import { useSyncedRef } from '../useSyncedRef';
-import { InitialState, NextState } from '../util/resolveHookState';
+import type { DependencyList, Dispatch } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+import { useSyncedRef } from '#root/useSyncedRef/index.js';
+import type { InitialState, NextState } from '#root/util/resolveHookState.js';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export interface ValidityState extends Record<any, any> {

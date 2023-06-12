@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { DependencyList, useEffect } from 'react';
-import { truthyAndArrayPredicate } from '../util/const';
-import { EffectCallback, EffectHook } from '../util/misc';
-import type { ConditionsList, ConditionsPredicate } from '../types';
+import type { DependencyList } from 'react';
+import { useEffect } from 'react';
+import { truthyAndArrayPredicate } from '#root/util/const.js';
+import type { EffectCallback, EffectHook } from '#root/util/misc.js';
+import type { ConditionsList, ConditionsPredicate } from '#root/types.js';
 
 /**
  * Like `useEffect` but its callback is invoked only if all given conditions match a given predicate.

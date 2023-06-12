@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDebouncedCallback } from '../..';
+import { useDebouncedCallback } from '#root/index.js';
 
 export const Example: React.FC = () => {
   const [state, setState] = useState('');

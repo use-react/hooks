@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { useRafCallback } from '../..';
+import { useRafCallback } from '#root/index.js';
 
 export const Example: React.FC = () => {
   const [eventDate, setEventDate] = useState<Date>();

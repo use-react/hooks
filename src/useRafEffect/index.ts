@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { DependencyList, useEffect } from 'react';
-import { useRafCallback } from '../useRafCallback';
+import type { DependencyList } from 'react';
+import { useEffect } from 'react';
+import { useRafCallback } from '#root/useRafCallback/index.js';
 
 /**
  * Like `React.useEffect`, but state is only updated within animation frame.

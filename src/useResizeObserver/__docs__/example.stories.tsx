@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useRef, useState } from 'react';
-import { UseResizeObserverCallback, useDebouncedCallback, useResizeObserver } from '../..';
+import type { UseResizeObserverCallback } from '#root/index.js';
+import { useDebouncedCallback, useResizeObserver } from '#root/index.js';
 
 export const Example: React.FC = () => {
   const ref = useRef<HTMLDivElement | null>(null);

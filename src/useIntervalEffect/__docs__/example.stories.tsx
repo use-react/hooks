@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { useIntervalEffect, useToggle } from '../..';
+import { useIntervalEffect, useToggle } from '#root/index.js';
 
 export const Example: React.FC = () => {
   const [state, setState] = useState<Date>();

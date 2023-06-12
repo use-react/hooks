@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { isBrowser } from '../util/const';
-import { off, on } from '../util/misc';
-import { InitialState } from '../util/resolveHookState';
+import { isBrowser } from '#root/util/const.js';
+import { off, on } from '#root/util/misc.js';
+import type { InitialState } from '#root/util/resolveHookState.js';
 
 export interface NetworkInformation extends EventTarget {
   readonly downlink: number;

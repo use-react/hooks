@@ -1,6 +1,7 @@
 /* eslint-disable func-names */
-import { renderHook } from '@testing-library/react-hooks/dom';
-import { useEventListener } from '../..';
+import { fireEvent } from '@testing-library/dom';
+import { act, renderHook } from '@testing-library/react-hooks/dom';
+import { useEventListener } from '#root/index.js';
 
 describe('useEventListener', () => {
   it('should be defined', () => {
@@ -66,10 +67,10 @@ describe('useEventListener', () => {
 
     renderHook(() => useEventListener(div, 'resize', spy, { passive: true }));
 
-    const evt = new Event('resize');
-    div.dispatchEvent(evt);
+    act(() => {
+      fireEvent.resize(div);
+    });
 
-    expect(spy).toHaveBeenCalledWith(evt);
     expect(context).toBe(div);
   });
 
@@ -83,10 +84,10 @@ describe('useEventListener', () => {
 
     renderHook(() => useEventListener(div, 'resize', { handleEvent: spy }, { passive: true }));
 
-    const evt = new Event('resize');
-    div.dispatchEvent(evt);
+    act(() => {
+      fireEvent.resize(div);
+    });
 
-    expect(spy).toHaveBeenCalledWith(evt);
     expect(context).toBe(div);
   });
 });

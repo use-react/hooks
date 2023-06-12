@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { usePreviousDistinct } from '../..';
+import { usePreviousDistinct } from '#root/index.js';
 
 export const Example: React.FC = () => {
   const [value, setValue] = useState(0);

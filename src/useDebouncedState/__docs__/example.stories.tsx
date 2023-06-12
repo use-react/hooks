@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useDebouncedState } from '../..';
+import { useDebouncedState } from '#root/index.js';
 
 export const Example: React.FC = () => {
   const [state, setState] = useDebouncedState('', 300, 500);

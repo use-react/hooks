@@ -1,5 +1,5 @@
 import { act, renderHook } from '@testing-library/react-hooks/dom';
-import { useScreenOrientation } from '../..';
+import { useScreenOrientation } from '#root/index.js';
 
 describe('useScreenOrientation', () => {
   // have to copy implementation as jsdom lacks of it

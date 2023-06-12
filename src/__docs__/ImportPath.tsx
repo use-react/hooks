@@ -1,5 +1,6 @@
 import { DocsContext, Source } from '@storybook/addon-docs';
-import React, { FC, useContext } from 'react';
+import type { FC } from 'react';
+import React, { useContext } from 'react';
 
 export interface ImportPathProps {
   root?: boolean;

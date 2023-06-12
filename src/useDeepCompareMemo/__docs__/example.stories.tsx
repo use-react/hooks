@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useMemo } from 'react';
-import { useRerender, useDeepCompareMemo } from '../..';
+import { useRerender, useDeepCompareMemo } from '#root/index.js';
 
 export const Example: React.FC = () => {
   const newOnEveryRender = { value: 'Foo' };

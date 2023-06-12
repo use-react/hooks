@@ -1,5 +1,5 @@
 import { renderHook } from '@testing-library/react-hooks/dom';
-import { useThrottledCallback } from '../..';
+import { useThrottledCallback } from '#root/index.js';
 
 describe('useThrottledCallback', () => {
   beforeAll(() => {

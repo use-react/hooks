@@ -21,10 +21,31 @@ module.exports = {
     {
       files: ['*.js', '*.ts', '*.jsx', '*.tsx'],
       extends: ['@react-hookz/eslint-config/react'],
+
       rules: {
         'react/button-has-type': 'off',
         'unicorn/prefer-node-protocol': 'off',
         'unicorn/prefer-top-level-await': 'off',
+
+        'import/extensions': [
+          'error',
+          'ignorePackages',
+          {
+            ts: 'never',
+            tsx: 'never',
+          },
+        ],
+        'import/no-relative-packages': 'error',
+        'import/no-useless-path-segments': 'error',
+
+        '@typescript-eslint/consistent-type-imports': [
+          'error',
+          {
+            prefer: 'type-imports',
+            disallowTypeAnnotations: true,
+            fixStyle: 'separate-type-imports',
+          },
+        ],
       },
     },
     {
@@ -35,6 +56,28 @@ module.exports = {
         '**/__tests__/**/*.tsx',
       ],
       extends: ['@react-hookz/eslint-config/react', '@react-hookz/eslint-config/jest'],
+
+      rules: {
+        'import/extensions': [
+          'error',
+          'ignorePackages',
+          {
+            ts: 'never',
+            tsx: 'never',
+          },
+        ],
+        'import/no-relative-packages': 'error',
+        'import/no-useless-path-segments': 'error',
+
+        '@typescript-eslint/consistent-type-imports': [
+          'error',
+          {
+            prefer: 'type-imports',
+            disallowTypeAnnotations: true,
+            fixStyle: 'separate-type-imports',
+          },
+        ],
+      }
     },
     {
       files: ['**/__docs__/**', '**/__tests__/**'],
@@ -48,6 +91,26 @@ module.exports = {
         '@typescript-eslint/no-unsafe-return': 'off',
         'unicorn/consistent-function-scoping': 'off',
         'unicorn/no-this-assignment': 'off',
+
+        'import/extensions': [
+          'error',
+          'ignorePackages',
+          {
+            ts: 'never',
+            tsx: 'never',
+          },
+        ],
+        'import/no-relative-packages': 'error',
+        'import/no-useless-path-segments': 'error',
+
+        '@typescript-eslint/consistent-type-imports': [
+          'error',
+          {
+            prefer: 'type-imports',
+            disallowTypeAnnotations: true,
+            fixStyle: 'separate-type-imports',
+          },
+        ],
       },
     },
     {

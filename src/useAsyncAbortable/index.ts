@@ -1,5 +1,6 @@
 import { useMemo, useRef } from 'react';
-import { AsyncState, useAsync, UseAsyncActions, UseAsyncMeta } from '../useAsync';
+import type { AsyncState, UseAsyncActions, UseAsyncMeta } from '#root/useAsync/index.js';
+import { useAsync } from '#root/useAsync/index.js';
 
 export interface UseAsyncAbortableActions<Result, Args extends unknown[] = unknown[]>
   extends UseAsyncActions<Result, Args> {

@@ -1,6 +1,6 @@
 import { renderHook } from '@testing-library/react-hooks/server';
 import { act } from '@testing-library/react-hooks/dom';
-import { useSet } from '../..';
+import { useSet } from '#root/index.js';
 
 describe('useSet', () => {
   it('should be defined', () => {

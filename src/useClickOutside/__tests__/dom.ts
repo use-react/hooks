@@ -1,6 +1,6 @@
 import { renderHook } from '@testing-library/react-hooks/dom';
-import { MutableRefObject } from 'react';
-import { useClickOutside } from '../..';
+import type { MutableRefObject } from 'react';
+import { useClickOutside } from '#root/index.js';
 
 describe('useClickOutside', () => {
   it('should be defined', () => {

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { act, renderHook } from '@testing-library/react-hooks/dom';
-import { useAsync } from '../..';
+import { useAsync } from '#root/index.js';
 
 describe('useAsync', () => {
   function getControllableAsync<Res, Args extends unknown[] = unknown[]>() {
@@ -42,7 +42,7 @@ describe('useAsync', () => {
       const [spy, resolve] = getControllableAsync<number, []>();
       const { result } = renderHook(() => useAsync(spy, 3));
 
-      expect((result.all[0] as ReturnType<typeof useAsync>)[0]).toStrictEqual({
+      expect(result.all[0][0]).toStrictEqual({
         status: 'not-executed',
         error: undefined,
         result: 3,

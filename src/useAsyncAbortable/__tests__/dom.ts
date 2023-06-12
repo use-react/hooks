@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/require-await */
 import { act, renderHook } from '@testing-library/react-hooks/dom';
-import { useAsyncAbortable } from '../..';
+import { useAsyncAbortable } from '#root/index.js';
 
 describe('useAsyncAbortable', () => {
   function getControllableAsync<Res, Args extends unknown[] = unknown[]>() {

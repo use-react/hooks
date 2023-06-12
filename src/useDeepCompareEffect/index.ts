@@ -1,7 +1,8 @@
-import { DependencyList, useEffect } from 'react';
+import type { DependencyList } from 'react';
+import { useEffect } from 'react';
 import { isEqual } from '@react-hookz/deep-equal';
-import { useCustomCompareEffect } from '../useCustomCompareEffect';
-import { EffectCallback, EffectHook } from '../util/misc';
+import { useCustomCompareEffect } from '#root/useCustomCompareEffect/index.js';
+import type { EffectCallback, EffectHook } from '#root/util/misc.js';
 
 /**
  * Like `useEffect`, but uses `@react-hookz/deep-equal` comparator function to validate deep

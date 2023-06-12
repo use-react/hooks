@@ -1,6 +1,7 @@
 import { renderHook } from '@testing-library/react-hooks/dom';
-import { DependencyList } from 'react';
-import { EffectCallback, useCustomCompareEffect, useUpdateEffect } from '../..';
+import type { DependencyList } from 'react';
+import type { EffectCallback } from '#root/index.js';
+import { useCustomCompareEffect, useUpdateEffect } from '#root/index.js';
 
 describe('useCustomCompareEffect', () => {
   it('should be defined', () => {

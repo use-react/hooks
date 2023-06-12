@@ -1,6 +1,7 @@
 import { act, renderHook } from '@testing-library/react-hooks/dom';
 import { useState } from 'react';
-import { useWindowSize, WindowSize } from '../..';
+import type { WindowSize } from '#root/index.js';
+import { useWindowSize } from '#root/index.js';
 
 describe('useWindowSize', () => {
   beforeEach(() => {

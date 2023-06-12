@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useCustomCompareEffect, useUpdateEffect } from '../..';
+import { useCustomCompareEffect, useUpdateEffect } from '#root/index.js';
 
 /**
  * A little hash function to generate a random number used to identify a string.
@@ -61,14 +61,14 @@ export const Example: React.FC = () => {
 
       <aside
         style={{
-          backgroundColor: '#DEDEDE',
+          backgroundColor: '#root/DEDEDE',
           borderRadius: '4px',
           margin: '2rem 5vw',
           padding: '1rem',
           fontSize: '14px',
           borderLeft: '3px solid',
           borderRight: '3px solid',
-          borderColor: '#ABABAB',
+          borderColor: '#root/ABABAB',
         }}>
         Don&apos;t copy our hash function or presume you can compare objects like we are doing here.
         Remember, objects in JS don&apos;t preserve key ordering.

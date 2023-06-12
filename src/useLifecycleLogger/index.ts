@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
-import { DependencyList, useEffect, useRef } from 'react';
+import type { DependencyList } from 'react';
+import { useEffect, useRef } from 'react';
 
 /**
  * This hook provides a console log when the component mounts, updates and unmounts.

@@ -1,12 +1,13 @@
 /* eslint-disable @typescript-eslint/no-use-before-define,no-use-before-define */
 import { useEffect, useMemo, useState } from 'react';
-import { useFirstMountState } from '../useFirstMountState';
-import { useIsomorphicLayoutEffect } from '../useIsomorphicLayoutEffect';
-import { useSyncedRef } from '../useSyncedRef';
-import { useUpdateEffect } from '../useUpdateEffect';
-import { isBrowser } from '../util/const';
-import { off, on } from '../util/misc';
-import { NextState, resolveHookState } from '../util/resolveHookState';
+import { useFirstMountState } from '#root/useFirstMountState/index.js';
+import { useIsomorphicLayoutEffect } from '#root/useIsomorphicLayoutEffect/index.js';
+import { useSyncedRef } from '#root/useSyncedRef/index.js';
+import { useUpdateEffect } from '#root/useUpdateEffect/index.js';
+import { isBrowser } from '#root/util/const.js';
+import { off, on } from '#root/util/misc.js';
+import type { NextState } from '#root/util/resolveHookState.js';
+import { resolveHookState } from '#root/util/resolveHookState.js';
 
 const storageListeners = new Map<Storage, Map<string, Set<CallableFunction>>>();
 

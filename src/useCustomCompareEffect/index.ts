@@ -1,8 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { DependencyList, useEffect, useRef } from 'react';
-import type { DependenciesComparator } from '../types';
-import { isBrowser } from '../util/const';
-import { basicDepsComparator, EffectCallback, EffectHook } from '../util/misc';
+import type { DependencyList } from 'react';
+import { useEffect, useRef } from 'react';
+import type { DependenciesComparator } from '#root/types.js';
+import { isBrowser } from '#root/util/const.js';
+import type { EffectCallback, EffectHook } from '#root/util/misc.js';
+import { basicDepsComparator } from '#root/util/misc.js';
 
 /**
  * Like `useEffect` but uses provided comparator function to validate dependency changes.

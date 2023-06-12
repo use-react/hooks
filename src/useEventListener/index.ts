@@ -1,8 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { RefObject, useEffect, useMemo } from 'react';
-import { useIsMounted } from '../useIsMounted';
-import { useSyncedRef } from '../useSyncedRef';
-import { hasOwnProperty, off, on } from '../util/misc';
+import type { RefObject } from 'react';
+import { useEffect, useMemo } from 'react';
+import { useIsMounted } from '#root/useIsMounted/index.js';
+import { useSyncedRef } from '#root/useSyncedRef/index.js';
+import { hasOwnProperty, off, on } from '#root/util/misc.js';
+
+const isEventTarget = (v: EventTarget | RefObject<EventTarget> | null): v is EventTarget => {
+  return v !== null && hasOwnProperty(v, 'addEventListener');
+};
 
 /**
  *  An HTML element or ref object containing an HTML element.
@@ -46,8 +51,7 @@ export function useEventListener<T extends EventTarget>(
   );
 
   useEffect(() => {
-    const tgt =
-      target && hasOwnProperty(target, 'current') ? (target as RefObject<T>).current : target;
+    const tgt = isEventTarget(target) ? target : target?.current;
     if (!tgt) return;
 
     const restParams = params.slice(2);

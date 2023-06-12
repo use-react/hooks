@@ -1,6 +1,8 @@
-import { BaseSyntheticEvent, useCallback, useState } from 'react';
-import { useSyncedRef } from '../useSyncedRef';
-import { InitialState, NextState, resolveHookState } from '../util/resolveHookState';
+import type { BaseSyntheticEvent } from 'react';
+import { useCallback, useState } from 'react';
+import { useSyncedRef } from '#root/useSyncedRef/index.js';
+import type { InitialState, NextState } from '#root/util/resolveHookState.js';
+import { resolveHookState } from '#root/util/resolveHookState.js';
 
 export function useToggle(
   initialState: InitialState<boolean>,
@@ -33,13 +35,17 @@ export function useToggle(
     state,
     useCallback((nextState) => {
       setState((prevState) => {
+        if (nextState === undefined) {
+          return !prevState;
+        }
+
         if (
-          nextState === undefined ||
-          (ignoreReactEventsRef.current &&
-            typeof nextState === 'object' &&
-            (nextState.constructor.name === 'SyntheticBaseEvent' ||
-              // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access,no-underscore-dangle,@typescript-eslint/no-explicit-any
-              typeof (nextState as any)._reactName === 'string'))
+          ignoreReactEventsRef.current &&
+          typeof nextState === 'object' &&
+          (nextState.constructor.name === 'SyntheticBaseEvent' ||
+            // @ts-expect-error _reactName is not in the type definition
+            // eslint-disable-next-line no-underscore-dangle
+            typeof nextState._reactName === 'string')
         ) {
           return !prevState;
         }
