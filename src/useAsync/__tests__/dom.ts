@@ -42,7 +42,9 @@ describe('useAsync', () => {
       const [spy, resolve] = getControllableAsync<number, []>();
       const { result } = renderHook(() => useAsync(spy, 3));
 
-      expect(result.all[0][0]).toStrictEqual({
+      const firstResult = result.all[0] as ReturnType<typeof useAsync>;
+
+      expect(firstResult[0]).toStrictEqual({
         status: 'not-executed',
         error: undefined,
         result: 3,

@@ -3,10 +3,10 @@ import type { RefObject } from 'react';
 import { useEffect, useMemo } from 'react';
 import { useIsMounted } from '#root/useIsMounted/index.js';
 import { useSyncedRef } from '#root/useSyncedRef/index.js';
-import { hasOwnProperty, off, on } from '#root/util/misc.js';
+import { off, on } from '#root/util/misc.js';
 
 const isEventTarget = (v: EventTarget | RefObject<EventTarget> | null): v is EventTarget => {
-  return v !== null && hasOwnProperty(v, 'addEventListener');
+  return v !== null && 'addEventListener' in v && 'removeEventListener' in v;
 };
 
 /**
