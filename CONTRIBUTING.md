@@ -65,9 +65,9 @@ If you are contributing for the first time, we recommend reading this
    - Docs should be placed in `__docs__` sub-folder, near the source file.  
      For example: `src/useFirstMountState/__docs__/story.mdx`.
    - Docs are built with Storybook. You can run `yarn storybook:watch` to preview your work.
-   - Write a short example demonstrating your hook in `example.stories.tsx` within the `__docs__`
+   - Write a short example demonstrating your hook in `example.story.tsx` within the `__docs__`
      folder. (If the filename misses the `.stories.tsx` part, Storybook won't find your example.)  
-     For example: `src/useFirstMountState/__docs__/example.stories.tsx`.
+     For example: `src/useFirstMountState/__docs__/example.story.tsx`.
    - Docs are written in MDX format.  
      [Read more about storybook docs](https://storybook.js.org/docs/react/writing-docs/introduction).
 5. Add a summary of the hook and a link to the docs to `README.md`.

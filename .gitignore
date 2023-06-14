@@ -4,3 +4,4 @@ node_modules
 /storybook-build
 /cjs
 /esm
+yarn-error.log

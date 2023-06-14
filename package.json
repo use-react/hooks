@@ -41,11 +41,8 @@
     "new-hook": "node utility/add-new-hook.cjs",
     "test": "yarn jest --selectProjects dom ssr",
     "test:coverage": "yarn test --coverage",
-    "lint": "yarn eslint --ext .js,.ts,.jsx,.tsx,.md,.mdx ./ ./.storybook",
-    "lint:fix": "yarn lint --fix",
-    "storybook:watch": "yarn start-storybook -p 6006 --docs --no-manager-cache",
-    "storybook:build": "yarn build-storybook --docs -o ./storybook-build",
-    "storybook:deploy": "yarn storybook-to-ghpages -s storybook:build"
+    "lint": "yarn eslint --ext .js,.ts,.jsx,.tsx,.md,.mdx ./",
+    "lint:fix": "yarn lint --fix"
   },
   "config": {
     "commitizen": {
@@ -53,7 +50,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,md}": "eslint --fix"
+    "*.{js,jsx,ts,tsx,md}": "yarn eslint --ext .js,.ts,.jsx,.tsx,.md,.mdx --fix"
   },
   "release": {
     "plugins": [
@@ -79,7 +76,6 @@
     }
   },
   "devDependencies": {
-    "@babel/core": "^7.22.5",
     "@commitlint/cli": "^17.6.5",
     "@commitlint/config-conventional": "^17.6.5",
     "@commitlint/cz-commitlint": "^17.5.0",
@@ -89,23 +85,12 @@
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^9.0.3",
-    "@storybook/addon-docs": "^6.5.16",
-    "@storybook/addon-essentials": "^6.5.16",
-    "@storybook/addon-links": "^6.5.16",
-    "@storybook/addon-postcss": "^2.0.0",
-    "@storybook/addons": "^6.5.16",
-    "@storybook/builder-webpack5": "^6.5.16",
-    "@storybook/manager-webpack5": "^6.5.16",
-    "@storybook/react": "^6.5.16",
-    "@storybook/storybook-deployer": "^2.8.16",
-    "@storybook/theming": "^6.5.16",
     "@testing-library/dom": "^9.3.0",
     "@testing-library/react-hooks": "^8.0.1",
     "@types/jest": "^29.5.2",
     "@types/js-cookie": "^3.0.3",
     "@types/react": "^17.0.61",
     "@types/react-dom": "^17.0.20",
-    "babel-loader": "^9.1.2",
     "commitizen": "^4.3.0",
     "commitlint": "^17.6.5",
     "concurrently": "^8.2.0",
